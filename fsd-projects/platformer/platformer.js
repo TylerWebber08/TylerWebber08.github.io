@@ -31,19 +31,25 @@ $(function () {
 
 
     // TODO 2 - Create Platforms AT LEAST 5
-  createPlatform(300, 700, 50, 20,);
-
+  createPlatform(600, 650, 50, 20, "gray");
+   createPlatform (440, 540, 50, 20, "gray");
+    createPlatform (600, 450, 50, 20, "gray" );
+     createPlatform (950, 450, 50, 20, "gray");
+       createPlatform (1250, 450, 50, 20, "gray");
 
 
     // TODO 3 - Create Collectables AT LEAST 5
-createCollectable("newDiamond", 250, 650, 0, 0.2);
-
-
+createCollectable ("mcdiamond2", 600, 600, 0, 0);
+createCollectable ("mcdiamond2", 960, 400, 0, 0);
+createCollectable ("mcdiamond2", 1265, 400, 0, 0);
+createCollectable ("mcdiamond2", 1300, 700, 0, 0);
+createCollectable ("mcdiamond2", 100, 700, 0, 0);
     
     // TODO 4 - Create Cannons AT LEAST 3
-  createCannon("right", 400, 1000 );
-
-
+  createCannon ("top", 300, 1000);
+    createCannon ("top", 870, 500);
+  createCannon ("top", 1250, 500);
+createCannon ("right", 750, 2000);
     
     
     //////////////////////////////////
