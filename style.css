@@ -5,9 +5,9 @@ body {
      font-family:'Times New Roman', Times, serif
 }
 
-#all-contents{
+#all-contents {
     max-width: 800px
-    margin: auto;
+    margin 0 auto;
 }
 
 /* navigation menu */
@@ -41,7 +41,7 @@ h1 {
 
 a {
     text-decoration: none
-    color: #fff;
+    color (#fff);
 }
 
 /*main container area beneath menu */
