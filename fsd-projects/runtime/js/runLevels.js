@@ -35,11 +35,13 @@ var runLevels = function (window) {
    
       }
 
-      function createEnemy(x, y, speed){
+      function createEnemy(x, y, speed, image, offsetX, offsetY, scale){
         var enemy = game.createGameItem("enemy", 25);
-        var redSquare = draw.rect(50, 50, "red");
-        redSquare.x = -25;
-        redSquare.y = -25;
+        var redSquare = draw.bitmap(image);
+        redSquare.x = offsetX;
+        redSquare.y = offsetY;
+        redSquare.scaleX = scale;
+        redSquare.scaleY = scale;
         enemy.addChild(redSquare);
         enemy.x = x;
         enemy.y = y;
@@ -68,12 +70,12 @@ var runLevels = function (window) {
           game.changeIntegrity(-10)
           game.increaseScore(100);
         };
-        
+      }
         function createMarker(x, y, speed){
         var marker = game.createGameItem("marker", 25);
         var yellowSquare = draw.rect(50, 50, "yellow");
         yellowSquare.x = -25;
-        yelloeSquare.y = -25;
+        yellowSquare.y = -25;
         marker.addChild(yellowSquare);
         marker.x = x;
         marker.y = y;
@@ -101,7 +103,7 @@ var runLevels = function (window) {
             createSawBlade(element.x, element.y, element.damage);
           }
           if(element.type === "enemy"){
-             createEnemy(element.x, element.y, element.speed);
+             createEnemy(element.x, element.y, element.speed, element.image, element.offsetX, element.offsetY, element.scale);
           }
           if(element.type === "reward"){
              createReward(element.x, element.y, element.speed);
@@ -131,4 +133,4 @@ if (
 ) {
   // here, export any references you need for tests //
   module.exports = runLevels;
-}}
+}

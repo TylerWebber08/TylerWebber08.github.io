@@ -18,8 +18,8 @@ var makeLevelData = function (window) {
           { type: "sawblade", x: 400, y: groundY - 125, damage: 10},
           { type: "sawblade", x: 600, y: groundY - 125, damage: 10},
           { type: "sawblade", x: 800, y: groundY - 125, damage: 15},
-        
-        
+          { type: "enemy", x: 500, y: groundY - 500, damage: 10, image: "images/freakygoomba.png"},
+          { type: "reward", x: 900, y: groundY - 125, speed: -2},
         ],
       },
       {
