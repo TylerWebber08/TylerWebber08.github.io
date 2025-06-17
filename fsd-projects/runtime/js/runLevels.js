@@ -90,19 +90,26 @@ var runLevels = function (window) {
       
       
       
-      // function calls
-      createSawBlade(400, groundY - 125, 10); 
-      createSawBlade(800, groundY - 125, 50);
-      createSawBlade(1000, groundY - 125, 100);
-    
-      createEnemy(400, groundY - 50, -3);
-      createEnemy(800, groundY - 50, -4);
-
-      createReward(900, groundY - 50, -3); 
+     
       function startLevel() {
       // TODO 13 goes below here
-
-
+        var level = levelData[currentLevel]; //fetches the current level of the array and stores it in the level variable
+        var levelObjects = level.gameItems;
+        for(var i = 0; i < levelObjects.length; i++){
+          var element = levelObjects[i];
+          if(element.type === "sawblade"){
+            createSawBlade(element.x, element.y, element.damage);
+          }
+          if(element.type === "enemy"){
+             createEnemy(element.x, element.y, element.speed);
+          }
+          if(element.type === "reward"){
+             createReward(element.x, element.y, element.speed);
+          }
+          if(element.type === "marker"){
+             createMarker(element.x, element.y, element.speed);
+          }
+        }
 
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
