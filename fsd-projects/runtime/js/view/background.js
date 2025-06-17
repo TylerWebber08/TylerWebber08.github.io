@@ -42,32 +42,32 @@ var background = function (window) {
             // TODO 1:
             // this currently fills the background with an obnoxious yellow;
             // you should modify both the height and color to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'gray');
+            var backgroundFill = draw.rect(canvasWidth,groundY,'DarkRed');
             background.addChild(backgroundFill);
             
             // TODO 2: - Add a moon and starfield
 
-           for(var i = 0; i < 100; i++){
-                var circle = draw.circle(3, "white", "LightGray", 2);
+           for(var i = 0; i < 2000; i++){
+                var circle = draw.circle(1, "DarkRed", "Black", 2);
                 circle.x = canvasWidth * Math.random();
                 circle.y = groundY * Math.random();
                 background.addChild(circle);
             }
 
              var moon = draw.bitmap("img/moon.png");
-            moon.x = canvas.width - 250;
+            moon.x = canvas.width - 400;
             moon.y = canvasHeight - 900;
-            moon.scaleX = 0.5;
-            moon.scaleY = 0.5;
+            moon.scaleX = 1.05;
+            moon.scaleY = 1.05;
             background.addChild(moon);
 
             
             
             
             // TODO 4: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            for (var i = 0; i < 5; ++i) {
-                var buildingColors = ["lightblue", "green", "yellow", "purple", "red"];
-                var buildingHeight = 400 * Math.random(100);
+            for (var i = 0; i < 10; ++i) {
+                var buildingColors = ["DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple","DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple", "DarkPurple", ];
+                var buildingHeight = 700 * Math.random(200);
                 var building = draw.rect(75, buildingHeight, buildingColors[i], "Black", 1);
                 building.x = 300 * i;
                 building.y = groundY - buildingHeight;
@@ -78,7 +78,7 @@ var background = function (window) {
             // TODO 3: Part 1 - Add a tree
             tree = draw.bitmap("img/tree.png");
             tree.x = 300;
-            tree.y = groundY - 225;
+            tree.y = groundY - 210;
             background.addChild(tree);
             
         } // end of render function - DO NOT DELETE
